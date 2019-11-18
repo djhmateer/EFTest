@@ -5,6 +5,7 @@ DB is called Blogging
 
 (localdb)\mssqllocaldb
 
+```sql  
 CREATE TABLE [dbo].[Blogs] (
     [BlogId] INT IDENTITY (1, 1) NOT NULL,
     [Name] NVARCHAR (200) NULL,
@@ -20,3 +21,4 @@ CREATE TABLE [dbo].[Posts] (
     CONSTRAINT [PK_dbo.Posts] PRIMARY KEY CLUSTERED ([PostId] ASC),
     CONSTRAINT [FK_dbo.Posts_dbo.Blogs_BlogId] FOREIGN KEY ([BlogId]) REFERENCES [dbo].[Blogs] ([BlogId]) ON DELETE CASCADE
 );
+```
